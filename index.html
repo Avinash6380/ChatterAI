@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chatter AI</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="showmenu">
+      <div class="left">
+        <h1>Chatter AI</h1><br>
+        <h3>How can I help you today?</h3>
+        <div class="dev-details">
+          <div class="dev-title">
+            <h2>Developer's</h2>
+          </div>
+          <div class="avinash-container" onclick="avinashPortfolio()">
+            <img src="asserts/avinash.png" id="avinash-image">
+            <h3 id="avinash-name">Avinash</h3>
+          </div>
+          <div class="azhar-container" onclick="azharPortfolio()">
+            <img src="asserts/azhar.jpg" id="avinash-image">
+            <h3 id="azhar-name">Azhar Sharif</h3>
+          </div>
+          <div class="faheem-container" onclick="faheemPortfolio()">
+            <img src="asserts/faheem.jpg" id="faheem-image">
+            <h3 id="faheem-name">Faheem</h3>
+          </div>
+          <div class="rooman-container" onclick="roomanPortfolio()">
+            <img src="asserts/rooman.jpg" id="rooman-image">
+            <h3 id="rooman-name">Rooman Arquam</h3>
+          </div>
+          <div class="kamesh-container" onclick="kameshPortfolio()">
+            <img src="asserts/kamesh.jpg" id="kamesh-image">
+            <h3 id="kamesh-name">Kamesh</h3>
+          </div>
+          
+        </div>
+       <!-- <div class="home">
+        <h4>Home</h4>
+        <span class="material-symbols-outlined">home</span>
+       </div> -->
+        
+        <!-- <div class="log-out" onclick="logOut()">
+          <h4>Log Out</h4>
+          <span class="material-symbols-outlined">logout</span>
+        </div> -->
+        <span class="material-symbols-outlined" id="close-Btn">close</span>
+      </div>
+    </div>
+    <div class="chatbot">
+      <header>
+        <h2>Chatter AI</h2>
+        <span class="material-symbols-outlined" onclick="feedback()">feedback</span> 
+      </header>
+      <!-- Welcome Messsage -->
+      <div class="notif">
+        <span class="welcome_text">Hey, Welcome Here ❤️</span>
+        <span class="loader"></span>
+      </div>
+      <!-- ------------- -->
+      <div class="menu">
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      </div>
+      <ul class="chatbox">
+
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hello dear 👋<br>How can I help you today?</p>
+        </li>
+      </ul>
+      <img src="message box.png" id="grey-messagebox">
+      <img src="kite.png" id="kite-1">
+      <img src="flower pot.png" id="flower-pot">
+      <img src="flower.png" id="flower">
+      <img src="letter.png" id="letter">
+
+      <div class="chat-input">
+        <textarea placeholder="Ask me anything..." required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+
+  </body>
+</html>
