@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Local IDEs
+.idea/
+.vscode/
+
+# Rasa specific files
+.rasa/
+models/
+*.log
+
+# Sensitive credentials
+.env
+.env.*
+secrets.json
+
+# Build / Zip folders
+build/
+*.zip
+*.tar.gz

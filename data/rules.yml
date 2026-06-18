@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: Say 'macha' anytime the user says macha
+  steps:
+  - intent: tamil
+  - action: utter_tamil
+
+- rule: Tell the date
+  steps:
+  - intent: date
+  - action: action_date
+
+- rule: Say 'age' when user ask age
+  steps:
+  - intent: agent_age
+  - action: action_agent_age

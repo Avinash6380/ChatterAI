@@ -1,0 +1,86 @@
+
+.container{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    border: solid 3px rgb(78, 181, 255);
+    margin-top: 10px 
+}
+h1{
+    background-color: rgb(78, 181, 255);
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 5px 0;
+}
+h3{
+    display: flex;
+    justify-content: center;
+}
+.input-group{
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.radio{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: black;
+    padding-bottom: 10px;
+    
+}
+.form-check{
+    padding-right: 100px;
+}
+.feedback{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.check{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: #dbdbdb; */
+    padding: 10px 0 10px 0;
+    /* margin: 10px 0 0 350px; */
+    color: black;
+
+}
+/* .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap; 
+    background-color: #a7a6a6;   
+    width: 800px;
+} */
+.button .d-grid .btn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0 10px 0;
+    width: 400px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+@media all and (max-width: 576px){
+    .button .d-grid .btn{
+        width: 200px;
+    }
+}

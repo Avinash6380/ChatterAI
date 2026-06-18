@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chatter AI</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Supabase Client Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/config.js"></script>
+    <script src="auth.js"></script>
+    <script>
+      // Blocking session check to prevent layout flash for unauthenticated users
+      (async function() {
+        try {
+          const client = window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
+          const { data: { session } } = await client.auth.getSession();
+          if (!session) {
+            window.location.href = 'login-page.html';
+          }
+        } catch (err) {
+          window.location.href = 'login-page.html';
+        }
+      })();
+    </script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="showmenu">
+      <div class="left">
+        <div class="welcome-container">
+          <span class="welcome-label">Welcome here ❤️</span>
+          <h1 class="welcome-username" id="sidebar-username">User</h1>
+        </div>
+        <!-- <div class="dev-details">
+          <div class="dev-title">
+            <h2>Developer's</h2>
+          </div>
+          <div class="avinash-container" onclick="avinashPortfolio()">
+            <img src="asserts/avinash.png" id="avinash-image">
+            <h3 id="avinash-name">Avinash</h3>
+          </div>
+         
+        </div> -->
+       <!-- <div class="home">
+        <h4>Home</h4>
+        <span class="material-symbols-outlined">home</span>
+       </div> -->
+        
+        <div class="log-out" onclick="logOut()" style="cursor: pointer;">
+          <h4>Log Out</h4>
+          <span class="material-symbols-outlined">logout</span>
+        </div>
+        <span class="material-symbols-outlined" id="close-Btn">close</span>
+      </div>
+    </div>
+    <div class="chatbot">
+      <header>
+        <h2>Chatter AI</h2>
+        <span class="material-symbols-outlined" onclick="feedback()">feedback</span> 
+      </header>
+      <!-- Welcome Messsage -->
+      <div class="notif">
+        <span class="welcome_text">Hey, Welcome Here ❤️</span>
+        <span class="loader"></span>
+      </div>
+      <!-- ------------- -->
+      <div class="menu">
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      </div>
+      <ul class="chatbox">
+
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hello dear 👋<br>How can I help you today?</p>
+        </li>
+      </ul>
+      <img src="./asserts/message box.png" id="grey-messagebox">
+      <img src="./asserts/kite.png" id="kite-1">
+      <img src="./asserts/flower pot.png" id="flower-pot">
+      <img src="./asserts/flower.png" id="flower">
+      <img src="./asserts/letter.png" id="letter">
+
+      <div class="chat-input">
+        <textarea placeholder="Ask me anything..." required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+
+  </body>
+</html>
